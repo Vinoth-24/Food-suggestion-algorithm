@@ -4,4 +4,5 @@ I have made this algorthim based on Unsupervised Machine Learning technique - Km
 Food is recommended based on users inputs(done with streamlit library). <br />
 Eda and model building is done in ____ file, Prediction and Deployment is done in ____ file. <br />
 
-# The deployment is made at heroku web. link here: https://food-suggestion-app.herokuapp.com/
+The deployment is made at heroku web. 
+# link here: https://food-suggestion-app.herokuapp.com/
