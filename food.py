@@ -16,12 +16,12 @@ st.set_page_config(page_title="ABC Private Limited",page_icon="random",layout="w
 @st.cache(allow_output_mutation=True) #For Autoupdate in app.
 
 def loading_model():
-    loaded_model = pickle.load(open('C:\\Users\\new\\Documents\\PythonFiles\\Food Recommendation\\model.sav', 'rb'))
+    loaded_model = pickle.load(open('model.sav', 'rb'))
     return loaded_model
 with st.spinner('Model is being loaded..'):
     model=loading_model()     #Model is loaded.
     
-cmn = [' sugar', ' ginger', ' garam masala', ' ghee', ' curry leaves',
+cmn = [' sugar', ' ginger', ' garam masala', ' ghee', ' curry leaves',     # all ingredients taken
        ' jaggery', ' urad dal', 'Rice flour', ' milk', ' tomato',
        ' garam masala powder', ' mustard oil', 'Chana dal',
        ' sesame seeds', ' saffron', ' turmeric', ' coconut',
@@ -32,7 +32,7 @@ cmn = [' sugar', ' ginger', ' garam masala', ' ghee', ' curry leaves',
     
 
 # Reading File:
-concat = pd.read_csv("C:\\Users\\new\\Documents\\PythonFiles\\Food Recommendation\\concat.csv")
+concat = pd.read_csv("concat.csv")
 
 #-------------------------------------------------------------------------------------------------------------------------------
 st.write("""
@@ -145,7 +145,7 @@ def decor():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    image = Image.open('C:\\Users\\new\\Documents\\PythonFiles\\Food Recommendation\\Indian-Food.jpg')
+    image = Image.open('Indian-Food.jpg')
     st.image(image, caption='')    
 
 #--------------------------------------------------------------------------------------------------------------------------------
